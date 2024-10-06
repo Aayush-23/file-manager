@@ -1,0 +1,25 @@
+.folder {
+  border-left: 1px solid black;
+  width: 200px;
+}
+
+.folder_name {
+  cursor: pointer;
+  padding-left: 8px;
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
+}
+.folder_name:hover {
+  background-color: #f0f0f0;
+}
+.files {
+  padding-left: 15px;
+}
+.arrow_icon {
+  margin-right: 0.3rem;
+}
+.folder_icon,
+.file_icon {
+  margin-right: 0.2rem;
+}
