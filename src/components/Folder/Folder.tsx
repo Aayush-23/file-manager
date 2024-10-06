@@ -31,9 +31,21 @@ const Folder: React.FC<FolderProps> = ({
   };
 
   const contextMenuConfig = [
-    { label: "Copy", id: "copy", func: () => console.log("Copy") },
-    { label: "Delete", id: "delete", func: () => console.log("Delete") },
-    { label: "Rename", id: "rename", func: () => console.log("Rename") },
+    {
+      label: "Copy",
+      id: "copy",
+      func: () => console.log(`Copy ${folderData.name}`),
+    },
+    {
+      label: "Delete",
+      id: "delete",
+      func: () => console.log(`Delete ${folderData.name}`),
+    },
+    {
+      label: "Rename",
+      id: "rename",
+      func: () => console.log(`Rename ${folderData.name}`),
+    },
   ];
 
   const handleRightClick = (e: React.MouseEvent) => {

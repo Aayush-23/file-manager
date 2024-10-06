@@ -1,12 +1,12 @@
 .folder {
   border-left: 1px solid black;
-  width: 200px;
+  width: 10rem;
 }
 
 .folder_name {
   cursor: pointer;
-  padding-left: 8px;
-  /* font-weight: bold; */
+  padding-left: 0.5rem;
+
   display: flex;
   align-items: center;
 }
@@ -14,12 +14,12 @@
   background-color: #f0f0f0;
 }
 .files {
-  padding-left: 15px;
+  padding-left: 1rem;
 }
 .arrow_icon {
   margin-right: 0.3rem;
 }
 .folder_icon,
 .file_icon {
-  margin-right: 0.2rem;
+  margin-right: 0.3rem;
 }
