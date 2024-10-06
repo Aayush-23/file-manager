@@ -21,6 +21,10 @@ const Folder: React.FC<FolderProps> = ({
 }) => {
   const [showChildren, setShowChildren] = useState(false);
   const [showContextMenu, setShowContextMenu] = useState(false);
+  const [contextMenuPosition, setContextMenuPosition] = useState({
+    x: 0,
+    y: 0,
+  });
 
   const toggleOpen = () => {
     setShowChildren((prev) => !prev);
@@ -35,6 +39,7 @@ const Folder: React.FC<FolderProps> = ({
   const handleRightClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    setContextMenuPosition({ x: e.clientX, y: e.clientY });
     setShowContextMenu(true);
   };
 
@@ -75,7 +80,11 @@ const Folder: React.FC<FolderProps> = ({
           </div>
         )}
       {showContextMenu && (
-        <ContextMenu config={contextMenuConfig} onClose={onCloseContextMenu} />
+        <ContextMenu
+          config={contextMenuConfig}
+          onClose={onCloseContextMenu}
+          position={contextMenuPosition}
+        />
       )}
     </div>
   );
