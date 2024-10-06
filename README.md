@@ -1,8 +1,8 @@
 # React + TypeScript + Vite
 
-For now I have used the file structure as given in the assignment, But ideally we can use the format like this -
+For now, I have used the file o as given in the assignment, But ideally, we can use the format like this -
 
-``{
+```{
   1: {
     id: 1,
     name: "File Explorer",
@@ -31,6 +31,6 @@ For now I have used the file structure as given in the assignment, But ideally w
     parentId: 3,
     children: [],
   },
-};``
+};```
 
 Using this format we can easily read the file and traverse without going in nestet format. And add, delete and rename will also be much easier.
