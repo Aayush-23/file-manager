@@ -33,4 +33,5 @@ For now, I have used the file o as given in the assignment, But ideally, we can 
   },
 };```
 
-Using this format we can easily read the file and traverse without going in nestet format. And add, delete and rename will also be much easier.
+Using this format we can easily read the file and traverse without going in nested format.
+And add, delete and rename will also be much easier.
