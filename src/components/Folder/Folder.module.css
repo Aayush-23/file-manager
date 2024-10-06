@@ -9,6 +9,7 @@
 
   display: flex;
   align-items: center;
+  border-radius: 2px;
 }
 .folder_name:hover {
   background-color: #f0f0f0;
@@ -22,4 +23,8 @@
 .folder_icon,
 .file_icon {
   margin-right: 0.3rem;
+}
+.selected {
+  background-color: #f0f0f0;
+  border-left: 2px solid black;
 }

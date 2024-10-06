@@ -5,13 +5,16 @@ import Folder from "../Folder";
 import { FolderType } from "../../types";
 
 const FileExplorer: React.FC = () => {
-  const handleFileClick = () => {};
+  const [selectedFile, setSelectedFile] = React.useState<number | null>(null);
+  const handleFileClick = (fileId: number) => {
+    setSelectedFile(fileId);
+  };
 
   return (
     <div>
       <Folder
         folderData={data as FolderType}
-        selectedFile={""}
+        selectedFile={selectedFile}
         onFileClick={handleFileClick}
       />
     </div>

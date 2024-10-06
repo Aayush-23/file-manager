@@ -10,8 +10,8 @@ import { FileType, FolderType } from "../../types";
 
 interface FolderProps {
   folderData: FolderType | FileType;
-  selectedFile: string;
-  onFileClick: (fileName: string) => void;
+  selectedFile: null | number;
+  onFileClick: (fileName: number) => void;
 }
 
 const Folder: React.FC<FolderProps> = ({
@@ -27,6 +27,7 @@ const Folder: React.FC<FolderProps> = ({
   });
 
   const toggleOpen = () => {
+    onFileClick(folderData.id);
     setShowChildren((prev) => !prev);
   };
 
@@ -60,7 +61,12 @@ const Folder: React.FC<FolderProps> = ({
   };
   return (
     <div className={styles.folder} onContextMenu={handleRightClick}>
-      <div className={styles.folder_name} onClick={toggleOpen}>
+      <div
+        className={`${styles.folder_name} ${
+          folderData.id === selectedFile ? styles.selected : ""
+        }`}
+        onClick={toggleOpen}
+      >
         {folderData.type === "folder" ? (
           showChildren ? (
             <MdOutlineExpandMore className={styles.arrow_icon} />
