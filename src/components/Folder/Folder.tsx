@@ -4,9 +4,9 @@ import { CiFolderOn } from "react-icons/ci";
 import styles from "./Folder.module.css";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineExpandMore } from "react-icons/md";
-import { CiFileOn } from "react-icons/ci";
 import ContextMenu from "../ContextMenu";
 import { FileType, FolderType } from "../../types";
+import FileIcon from "../FileIcon";
 
 interface FolderProps {
   folderData: FolderType | FileType;
@@ -77,7 +77,7 @@ const Folder: React.FC<FolderProps> = ({
         {folderData.type === "folder" ? (
           <CiFolderOn className={styles.folder_icon} />
         ) : (
-          <CiFileOn className={styles.file_icon} />
+          <FileIcon type={folderData.meta} className={styles.file_icon} />
         )}
         {folderData.name}
       </div>

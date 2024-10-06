@@ -23,6 +23,8 @@
 .folder_icon,
 .file_icon {
   margin-right: 0.3rem;
+  height: 14px;
+  width: 14px;
 }
 .selected {
   background-color: #f0f0f0;
